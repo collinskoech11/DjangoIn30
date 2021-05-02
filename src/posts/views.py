@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+
+from .models import Post
 # Create your views here.
 
 # CRUD - create retreive update delete
@@ -11,4 +13,4 @@ def post_list_view(request):
     context = {
         'post_objects': post_objects
     }
-    return render(request, "index.html", context)
+    return render(request, "posts/index.html", context)
